@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Letter>
+<div>
+    <div>
+        Заголовок
+    </div>
+    <div>
+        Поиск
+    </div>
+    <div>
+        @foreach (var item in Model)
+        {
+            <div>
+                <div>
+                    <div>@item.FromWhom</div><div>@item.ToWhom</div><div>@item.Date</div>
+                </div>
+                <div>@item.Header</div>
+            </div>
+        }
+    </div>
+</div>
