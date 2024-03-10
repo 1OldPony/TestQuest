@@ -1,19 +1,30 @@
 ﻿@model IEnumerable<Letter>
 <div>
+    @*<div>
+        <div>Создать письмо</div>
+        <div>
+            <div><input type="text" id="FromWhom" name="FromWhom" /></div>
+            <div><input type="text" id="ToWhom" name="ToWhom" /></div>
+            <div><input type="text" id="Header" name="Header" /></div>
+            <div><input type="text" id="Text" name="Text" /></div>
+        </div>
+        <div>Сохранить</div>
+    </div>*@
     <div>
-        Заголовок
-    </div>
-    <div>
-        Поиск
+        <div>Поиск</div>
+        <div><input type="text" id="serchRow" /></div>
     </div>
     <div>
         @foreach (var item in Model)
         {
             <div>
                 <div>
-                    <div>@item.FromWhom</div><div>@item.ToWhom</div><div>@item.Date</div>
+                    <div>
+                        <div>@item.FromWhom</div><div>@item.ToWhom</div><div>@item.Date</div>
+                    </div>
+                    <div>@item.Header</div>
                 </div>
-                <div>@item.Header</div>
+                <button>Удалить</button>
             </div>
         }
     </div>

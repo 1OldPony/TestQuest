@@ -49,20 +49,20 @@ namespace TestQuest.Controllers
                 return Unauthorized("Пароль не верный");
         }
 
-        [HttpPost("CreateEmp")]
-        public async Task<IActionResult> CreateEmp([FromBody]Employe emp)
-        {
-            try
-            {
-                _context.Employes.Add(emp);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        //[HttpPost("CreateEmp")]
+        //public async Task<IActionResult> CreateEmp([FromBody]Employe emp)
+        //{
+        //    try
+        //    {
+        //        _context.Employes.Add(emp);
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }
